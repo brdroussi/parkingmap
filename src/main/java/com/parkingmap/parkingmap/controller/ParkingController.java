@@ -47,18 +47,6 @@ public class ParkingController {
         return new ResponseEntity<>(parkings, HttpStatus.OK);
     }
 
-    /**
-     * Récupérer un parking avec son id
-     *
-     * @param id
-     * @return
-     */
-    @GetMapping("/get/{id}")
-    public ResponseEntity<Parking> getParking(@RequestParam("id") String id) {
-        Parking parking = parkingService.getParking(id);
-        return new ResponseEntity<>(parking, HttpStatus.OK);
-    }
-
 
     /**
      * Retourner tous les parkings

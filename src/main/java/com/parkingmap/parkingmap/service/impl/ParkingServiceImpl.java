@@ -63,15 +63,6 @@ public class ParkingServiceImpl implements ParkingService {
         return parkingRepository.save(parking);
     }
 
-    /**
-     *
-     * @param id
-     * @return
-     */
-    @Override
-    public Parking getParking(String id) {
-        return parkingRepository.findParkingById(id);
-    }
 
     /**
      * Récupère les parkings à proximité d'un point donné

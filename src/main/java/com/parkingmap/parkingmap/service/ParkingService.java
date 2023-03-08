@@ -18,8 +18,4 @@ public interface ParkingService  {
     // Récupèrer tous les parkings sur la carte
     List<Parking> getAllParking();
 
-    //Récupérer un parking avec un id
-    Parking getParking(String id);
-
-
 }
