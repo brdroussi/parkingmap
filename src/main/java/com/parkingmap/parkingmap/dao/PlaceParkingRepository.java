@@ -7,6 +7,11 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+/**
+ * Author Brahim DROUSSI
+ * 06/03/2023
+ */
+
 @Repository
 public interface PlaceParkingRepository extends JpaRepository<PlaceParking, String> {
 

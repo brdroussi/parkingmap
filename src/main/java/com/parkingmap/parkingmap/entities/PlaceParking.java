@@ -1,8 +1,11 @@
 package com.parkingmap.parkingmap.entities;
 
+import javax.persistence.*;
 
-import jakarta.persistence.*;
-
+/**
+ * Author Brahim DROUSSI
+ * 06/03/2023
+ */
 @Entity
 @Table(name = "place_parking")
 public class PlaceParking {

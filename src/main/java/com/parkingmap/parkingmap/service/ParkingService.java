@@ -3,15 +3,23 @@ package com.parkingmap.parkingmap.service;
 
 import com.parkingmap.parkingmap.dto.ParkingDTO;
 import com.parkingmap.parkingmap.entities.Parking;
+import org.opengis.referencing.operation.TransformException;
 
-import javax.xml.crypto.dsig.TransformException;
 import java.util.List;
 
 public interface ParkingService  {
 
-    List<ParkingDTO> getParkings(Double latitude, Double longitude, Float perimetre) throws org.opengis.referencing.operation.TransformException, TransformException;
-    Parking addParking(Parking parking) throws TransformException;
-    List<Parking> getAllParking() throws TransformException;
+    // Récupèrer les DTOs de parkings à proximité d'un point de départ en fonction de la latitude, de la longitude et du périmètre de recherche
+    List<ParkingDTO> getParkings(Double latitude, Double longitude, Float perimetre) throws TransformException;
+
+    // Ajouter un parking à la carte
+    Parking addParking(Parking parking);
+
+    // Récupèrer tous les parkings sur la carte
+    List<Parking> getAllParking();
+
+    //Récupérer un parking avec un id
+    Parking getParking(String id);
 
 
 }

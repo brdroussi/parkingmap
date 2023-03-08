@@ -1,14 +1,21 @@
 package com.parkingmap.parkingmap.utils;
-
-
-
 import com.parkingmap.parkingmap.dto.ParkingDTO;
 import com.parkingmap.parkingmap.entities.Parking;
 import org.springframework.stereotype.Component;
 
+/**
+ * Author Brahim DROUSSI
+ * 06/03/2023
+ */
+
 @Component
 public class ParkingMapper {
-
+    /**
+     * Convertit un objet Parking en un objet ParkingDTO en copiant les propriétés appropriées
+     *
+     * @param parking
+     * @return
+     */
     public static ParkingDTO toParkingDTO(Parking parking) {
         ParkingDTO parkingDTO = new ParkingDTO();
         parkingDTO.setId(parking.getId());
@@ -20,6 +27,12 @@ public class ParkingMapper {
         return parkingDTO;
     }
 
+    /**
+     * Convertit un objet ParkingDTO en un objet Parking en copiant les propriétés appropriées
+     *
+     * @param parkingDTO
+     * @return
+     */
     public static Parking toParking(ParkingDTO parkingDTO) {
         Parking parking = new Parking();
         parking.setId(parkingDTO.getId());
