@@ -1,5 +1,5 @@
 # parkingmap
-Application de gestion de parkings
+Parking Map
 
 Cette application permet de récupérer la liste des parkings à proximité et leur nombre de places disponibles en temps réel.
 Technologies utilisées :
