@@ -38,6 +38,10 @@ Tests
 
 L'application inclut des tests unitaires et d'intégration avec JUnit et Mockito.
 
+Amélioration 0 JOUTER:
+
+Je n'ai pas eu le temps pour récupérer les facets et vérifier la disponibité de parking avant l'affichage
+
 
 <img width="928" alt="Requête Parkings à proximité2" src="https://user-images.githubusercontent.com/41145526/224035047-c8f496c4-4a48-4780-b020-4fa2f4790310.PNG">
 <img width="843" alt="Swagger" src="https://user-images.githubusercontent.com/41145526/224035052-f138dc08-848d-4c71-ae41-e989ee950816.PNG">
