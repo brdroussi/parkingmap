@@ -29,7 +29,7 @@ Utilisation
 
 L'application expose une API REST avec les endpoints suivants :
 
-    GET /parking/proximite : renvoie la liste des parkings de la ville,id ,adresse ,nom , nombre de places totales et nombre de places disponibles en temps réel.
+    GET /parking/proximite : renvoie la liste des parkings à proximité de la ville, id, adresse, nom, nombre de places totales et nombre de places disponibles en temps réel.
     GET /parking/add : ajout d'un parking dans la base de donnée.
     GET /parking/all : renvoie la liste de tous les parkings de la ville.
 
