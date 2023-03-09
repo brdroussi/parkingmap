@@ -48,6 +48,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.Mockito.when;
 
+/**
+ * Author Brahim DROUSSI
+ * 06/03/2023
+ */
 
 @ExtendWith(MockitoExtension.class)
 @ExtendWith(SpringExtension.class)
@@ -72,7 +76,7 @@ public class ParkingServiceTest {
 
     @Test
     public void testGetParkings() throws Exception {
-        // Create a mock RestTemplate
+        // Créer un nouveau parking
         List<ParkingDTO> parkingDTOs = new ArrayList<>();
         ParkingDTO parkingDTO = new ParkingDTO();
         parkingDTO.setId("1ezez");
@@ -85,7 +89,7 @@ public class ParkingServiceTest {
         parkingDTOs.add(parkingDTO);
         when(parkingDTOList.iterator()).thenReturn(parkingDTOs.iterator());
 
-        // Call the getParkings() method and verify the results
+        // Appel la méthode getParkings() et vérifier les résultats
         List<ParkingDTO> result = parkingService.getParkings(0.1560, 45.531, 2f);
         assertThat(result).isNotNull();
         assertThat(result.size()).isEqualTo(1);
