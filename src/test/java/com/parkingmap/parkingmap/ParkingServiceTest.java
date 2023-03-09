@@ -1,30 +1,23 @@
 package com.parkingmap.parkingmap;
 
 
-
 import com.parkingmap.parkingmap.dao.ParkingRepository;
 import com.parkingmap.parkingmap.dto.ParkingDTO;
-import com.parkingmap.parkingmap.dto.PlaceParkingDTO;
 import com.parkingmap.parkingmap.service.impl.ParkingServiceImpl;
 
+import org.junit.Before;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.opengis.referencing.FactoryException;
-import org.opengis.referencing.operation.TransformException;
-import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.http.*;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.Mockito.when;
 
 /**
@@ -42,9 +35,6 @@ public class ParkingServiceTest {
     @Mock
     private List<ParkingDTO> parkingDTOList;
 
-    @Mock
-    private List<PlaceParkingDTO> placeParkings;
-
     @InjectMocks
     private ParkingServiceImpl parkingService;
 
@@ -53,6 +43,11 @@ public class ParkingServiceTest {
         MockitoAnnotations.initMocks(this);
     }
 
+    /**
+     * Test de la méthode GetParkings
+     *
+     * @throws Exception
+     */
     @Test
     public void testGetParkings() throws Exception {
         // Créer un nouveau parking
@@ -68,8 +63,9 @@ public class ParkingServiceTest {
         parkingDTOs.add(parkingDTO);
         when(parkingDTOList.iterator()).thenReturn(parkingDTOs.iterator());
 
-        // Appel la méthode getParkings() et vérifier les résultats
-        List<ParkingDTO> result = parkingService.getParkings(0.1560, 45.531, 2f);
+        // Executer la méthode getParkings() et vérifier les résultats
+        List<ParkingDTO> result = parkingService.getParkingsProximite(0.1560, 45.531, 2f);
+
         assertThat(result).isNotNull();
         assertThat(result.size()).isEqualTo(1);
     }

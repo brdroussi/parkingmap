@@ -43,10 +43,9 @@ public class ParkingController {
     @GetMapping("/proximite")
     public ResponseEntity<List<ParkingDTO>> getParkingsProximite(@RequestParam("latitude")  Double latitude, @RequestParam("longitude") Double longitude, @RequestParam("perimetre") Float perimetre) throws TransformException {
 
-        List<ParkingDTO> parkings = parkingService.getParkings(latitude,longitude,perimetre);
+        List<ParkingDTO> parkings = parkingService.getParkingsProximite(latitude,longitude,perimetre);
         return new ResponseEntity<>(parkings, HttpStatus.OK);
     }
-
 
     /**
      * Retourner tous les parkings

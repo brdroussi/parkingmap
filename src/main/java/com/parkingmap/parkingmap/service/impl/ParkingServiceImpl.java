@@ -74,7 +74,7 @@ public class ParkingServiceImpl implements ParkingService {
      * @throws TransformException Si une erreur survient lors de la conversion des coordonnées
      */
     @Override
-    public List<ParkingDTO> getParkings(Double latitude, Double longitude, Float perimetre) throws TransformException {
+    public List<ParkingDTO> getParkingsProximite(Double latitude, Double longitude, Float perimetre) throws TransformException {
 
         // Créer un objet GeodeticCalculator pour calculer la distance entre deux points
         GeodeticCalculator calc = new GeodeticCalculator();

@@ -10,7 +10,7 @@ import java.util.List;
 public interface ParkingService  {
 
     // Récupèrer les DTOs de parkings à proximité d'un point de départ en fonction de la latitude, de la longitude et du périmètre de recherche
-    List<ParkingDTO> getParkings(Double latitude, Double longitude, Float perimetre) throws TransformException;
+    List<ParkingDTO> getParkingsProximite(Double latitude, Double longitude, Float perimetre) throws TransformException;
 
     // Ajouter un parking à la carte
     Parking addParking(Parking parking);
