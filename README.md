@@ -2,7 +2,7 @@
 Application de gestion de parkings
 
 Cette application permet de récupérer la liste des parkings à proximité et leur nombre de places disponibles en temps réel.
-Technologies utilisées
+Technologies utilisées :
 
     Spring Boot 2.6.4 pour la gestion des dépendances et le développement de l'application web
     Hibernate pour gérer la persistence des objets en base de donnée
