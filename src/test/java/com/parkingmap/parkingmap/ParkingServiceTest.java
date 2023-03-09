@@ -89,7 +89,7 @@ public class ParkingServiceTest {
         parkingDTOs.add(parkingDTO);
         when(parkingDTOList.iterator()).thenReturn(parkingDTOs.iterator());
 
-        // Appel la méthode getParkings() et vérifier les résultats
+        // Executer la méthode getParkings() et vérifier les résultats
         List<ParkingDTO> result = parkingService.getParkings(0.1560, 45.531, 2f);
         assertThat(result).isNotNull();
         assertThat(result.size()).isEqualTo(1);
