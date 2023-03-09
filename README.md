@@ -29,8 +29,8 @@ Utilisation
 
 L'application expose une API REST avec les endpoints suivants :
 
-    GET /parking/proximite : renvoie la liste des parkings de la ville, adresse, nombre de places totales et nombre de places disponibles en temps réel.
-    GET /parking/add : ajouter un parking dans la base de donnée.
+    GET /parking/proximite : renvoie la liste des parkings de la ville,id ,adresse ,nom , nombre de places totales et nombre de places disponibles en temps réel.
+    GET /parking/add : ajout d'un parking dans la base de donnée.
     GET /parking/all : renvoie la liste de tous les parkings de la ville.
 
 Vous pouvez consulter la documentation de l'API REST avec Swagger en ouvrant l'URL http://localhost:8080/swagger-ui/ dans votre navigateur web.
