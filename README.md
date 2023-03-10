@@ -38,7 +38,7 @@ Tests
 
 L'application inclut des tests unitaires et d'intégration avec JUnit et Mockito.
 
-Amélioration 0 JOUTER:
+Amélioration:
 
 Je n'ai pas eu le temps pour récupérer les facets et vérifier la disponibité de parking avant l'affichage
 
